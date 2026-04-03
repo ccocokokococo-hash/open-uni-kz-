@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Университеттер | Open Uni KZ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">🎓</div>
+        <div>Open Uni KZ</div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Басты бет</a>
+        <a href="professions.html">Мамандықтар</a>
+        <a href="quiz.html">Тест</a>
+        <a href="courses.html">Мини-курстар</a>
+        <a href="universities.html">Университеттер</a>
+        <a href="community.html">Community</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="courses.html">Курстар</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2>Университеттер базасы және интерактив карта</h2>
+          <p>Қазақстан және шетел университеттері. Картадан орналасуын көріп, карточкадан қысқаша ақпарат аласың.</p>
+        </div>
+      </div>
+
+      <div class="toolbar reveal">
+        <input id="searchUniversity" class="input" type="text" placeholder="Университет, қала немесе ел бойынша іздеу">
+        <select id="filterUniversityType" class="select">
+          <option value="">Барлығы</option>
+          <option value="Қазақстан">Қазақстан</option>
+          <option value="Шетел">Шетел</option>
+        </select>
+      </div>
+
+      <div class="card map-card reveal" style="margin-bottom:18px">
+        <div id="map"></div>
+      </div>
+
+      <div id="universityList" class="uni-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div><strong>Open Uni KZ</strong></div>
+      <div>Университеттер беті</div>
+    </div>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/universities.js"></script>
+</body>
+</html>
