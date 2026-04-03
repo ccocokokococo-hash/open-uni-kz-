@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль | Open Uni KZ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">🎓</div>
+        <div>Open Uni KZ</div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Басты бет</a>
+        <a href="professions.html">Мамандықтар</a>
+        <a href="quiz.html">Тест</a>
+        <a href="courses.html">Мини-курстар</a>
+        <a href="universities.html">Университеттер</a>
+        <a href="community.html">Community</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="quiz.html">Тестке өту</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2>Менің профилім</h2>
+          <p>Бұл жерде сақталған мамандықтар мен тест нәтижелері көрсетіледі.</p>
+        </div>
+      </div>
+
+      <div class="profile-box">
+        <div class="card reveal">
+          <h3>Сақталған мамандықтар</h3>
+          <div id="favoriteProfessions"></div>
+        </div>
+        <div class="card reveal">
+          <h3>Сақталған тест нәтижесі</h3>
+          <div id="savedQuizResult"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div><strong>Open Uni KZ</strong></div>
+      <div>Профиль беті</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
