@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мамандықтар | Open Uni KZ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">🎓</div>
+        <div>Open Uni KZ</div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Басты бет</a>
+        <a href="professions.html">Мамандықтар</a>
+        <a href="quiz.html">Тест</a>
+        <a href="courses.html">Мини-курстар</a>
+        <a href="universities.html">Университеттер</a>
+        <a href="community.html">Community</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="quiz.html">Тест</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2>Мамандықтар каталоги</h2>
+          <p>Әр мамандық бойынша сипаттама, жалақы, пәндер, артықшылықтары, кемшіліктері және оқуға болатын университеттер көрсетілген.</p>
+        </div>
+      </div>
+
+      <div class="toolbar reveal">
+        <input id="searchProfession" class="input" type="text" placeholder="Мамандық, пән немесе сипаттама бойынша іздеу">
+        <select id="filterCategory" class="select">
+          <option value="">Барлық санат</option>
+          <option>Медицина</option>
+          <option>IT</option>
+          <option>Дизайн</option>
+          <option>Бизнес</option>
+          <option>Құқық</option>
+          <option>Қоғам</option>
+          <option>Білім</option>
+          <option>Медиа</option>
+          <option>Инженерия</option>
+          <option>Ғылым</option>
+          <option>Тіл</option>
+          <option>Қызмет көрсету</option>
+        </select>
+        <select id="filterSubject" class="select">
+          <option value="">Барлық пән</option>
+        </select>
+      </div>
+
+      <div id="professionList" class="catalog"></div>
+    </section>
+  </main>
+
+  <div id="professionModal" class="modal">
+    <div class="modal-box">
+      <div id="professionModalBody"></div>
+      <div style="margin-top:16px">
+        <button id="closeModalBtn" class="btn btn-primary">Жабу</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div><strong>Open Uni KZ</strong></div>
+      <div>Каталог беті</div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
