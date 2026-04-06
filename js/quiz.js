@@ -138,18 +138,21 @@ const quizResults = {
 
 document.addEventListener("DOMContentLoaded", () => {
   const wrap = document.getElementById("quizContainer");
-  if (!wrap) return;
-
   const form = document.getElementById("quizForm");
   const progress = document.getElementById("progressBar");
   const submitBtn = document.getElementById("submitQuiz");
   const resultBox = document.getElementById("quizResultBox");
 
+  if (!wrap || !form || !progress || !submitBtn || !resultBox) {
+    console.error("Quiz elements not found");
+    return;
+  }
+
   form.innerHTML = quizQuestions.map((q, i) => `
     <section class="q-card reveal">
       <h3 class="q-title">${i + 1}. ${q.text}</h3>
       <div class="options">
-        ${q.options.map((opt, j) => `
+        ${q.options.map((opt) => `
           <label class="option">
             <input type="radio" name="q${i}" value="${opt.type}">
             <span>${opt.label}</span>
@@ -160,6 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `).join("");
 
   const inputs = form.querySelectorAll("input[type='radio']");
+
   function updateProgress() {
     let answered = 0;
     quizQuestions.forEach((_, i) => {
@@ -170,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   inputs.forEach(input => input.addEventListener("change", updateProgress));
 
-  submitBtn.addEventListener("click", e => {
+  submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
     const scores = {medicine:0,it:0,design:0,education:0};
@@ -191,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let bestType = "education";
     let bestScore = -1;
+
     Object.entries(scores).forEach(([key, value]) => {
       if (value > bestScore) {
         bestScore = value;
@@ -225,7 +230,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     `;
-    resultBox.scrollIntoView({behavior:"smooth",block:"start"});
+
+    resultBox.scrollIntoView({behavior:"smooth", block:"start"});
   });
 
   updateProgress();
