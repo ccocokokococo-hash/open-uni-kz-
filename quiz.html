@@ -2,32 +2,83 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
-  <title>Тест</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест | Open Uni KZ</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1 style="text-align:center;">Мамандық тесті</h1>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">🎓</div>
+        <div>Open Uni KZ</div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Басты бет</a>
+        <a href="professions.html">Мамандықтар</a>
+        <a href="quiz.html">Тест</a>
+        <a href="courses.html">Мини-курстар</a>
+        <a href="universities.html">Университеттер</a>
+        <a href="community.html">Community</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="professions.html">Каталог</a>
+    </div>
+  </header>
 
-<!-- ПРОГРЕСС -->
-<div style="width:80%;margin:auto;height:6px;background:#eee;border-radius:10px;">
-  <div id="progressBar" style="height:6px;width:0%;background:#6366f1;border-radius:10px;"></div>
-</div>
+  <main class="page">
+    <section class="container">
 
-<!-- ТЕСТ -->
-<div id="quizContainer" style="max-width:800px;margin:30px auto;">
-  <form id="quizForm"></form>
-</div>
+      <!-- ВАЖНО: ID сақталды -->
+      <div class="form-shell reveal" id="quizContainer">
+        <div class="form-card">
 
-<!-- КНОПКА -->
-<div style="text-align:center;">
-  <button id="submitQuiz" class="btn">Нәтижені көру</button>
-</div>
+          <div class="form-top"></div>
 
-<!-- РЕЗУЛЬТАТ -->
-<div id="quizResultBox" style="max-width:800px;margin:30px auto;"></div>
+          <div class="form-body">
 
-<script src="js/quiz.js"></script>
+            <h1>Мамандық таңдау тесті</h1>
+            <p>
+              Барлық 12 сұраққа жауап бер. Соңында саған жақын бағыт,
+              мамандықтар және университеттер ұсынылады.
+            </p>
+
+            <!-- ПРОГРЕСС -->
+            <div class="progress">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <!-- ТЕСТ ОСЫ ЖЕРГЕ ШЫҒАДЫ -->
+            <form id="quizForm"></form>
+
+            <!-- КНОПКА -->
+            <div style="margin-top:18px">
+              <button type="button" id="submitQuiz" class="btn btn-primary">
+                Нәтижені көру
+              </button>
+            </div>
+
+            <!-- НӘТИЖЕ -->
+            <div id="quizResultBox"></div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div><strong>Open Uni KZ</strong></div>
+      <div>Тест беті</div>
+    </div>
+  </footer>
+
+  <!-- ❗ ӨТЕ МАҢЫЗДЫ: ПОРЯДОК -->
+  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
